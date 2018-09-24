@@ -37,9 +37,9 @@ $ ls
 Copy and paste the output below.
 ----------
 
+foo.txt
 
-
-==========
+==========k
 7. Create another new file using touch.
 
 $ touch bar.txt
@@ -53,7 +53,10 @@ $ touch bar.txt
 Copy and paste the output below.
 ----------
 
-
+ls -l
+total 0
+-rw-r--r-- 1 brand 197609 0 Sep 23 19:25 bar.txt
+-rw-r--r-- 1 brand 197609 0 Sep 23 19:25 foo.txt
 
 ==========
 9. Create a copy of bar.txt called baz.txt and then list the files again.
@@ -62,21 +65,24 @@ Copy and paste the output below.
 Write the command that you used to copy the file.  Additionally, copy and paste the output of your file listing below.
 ----------
 
-
+Cp -r
+bar.txt baz.txt foo.txt
 
 ==========
 10. Delete the file called bar.txt and then list the files again.
 
 Write the command that you used to remove the file.  Copy and paste the output of your file listing below.
 ----------
+ Rm bar.txt
+baz.txt  foo.txt
+
 ==========
 11. Move the file called foo.txt to qux.txt and then list the files again.
 
 
 Write the command that you used to move the file.  Copy and paste the output of your file listing below.
 ----------
-
-
+mv foo.txt qux.txt
 
 ==========
 12. Go up one directory so that you're in ~/mtec1002-lab-03.
@@ -90,7 +96,8 @@ Write the command that you used to move the file.  Copy and paste the output of 
 
 Write out the command that you used and what happened.
 ----------
-
+rmdir my_files
+rmdir: my_files: Directory not empty
 
 
 ==========
@@ -98,7 +105,8 @@ Write out the command that you used and what happened.
 
 Write out the command that you used and what happened.
 ----------
-
+rm my_files
+rm: my_files: is a directory
 
 
 ==========
@@ -120,7 +128,7 @@ Use the command called cat on the file to show its contents.
 
 Describe what happened below.
 ----------
-
+A lot of text came up.
 
 
 ==========
@@ -133,7 +141,8 @@ Use the command, head, on the file to show the contents of the beginning of the 
 Write the command that you used below.  Write the last line of the output below (it should be the title).
 ----------
 
-
+head books/others/pg1232.txt
+Title: The Prince
 
 ==========
 18. Using the same file again!
@@ -144,7 +153,8 @@ Use tail on the file to show the contents of the end of the file.
 
 Write the command that you used below.  Write the last line of the output below (it should be the title).
 ----------
-
+tail books/other/pg1232.txt
+Title: The Prince
 
 
 ==========
@@ -157,22 +167,27 @@ Use less and more on the file to show the contents of the file.  Try pressing sp
 Write the command that you used below.  Describe what spacebar and q does after using either less or more.
 ----------
 
-
+less books/other/pg1232.txt
+q exits out of the profram
 
 ==========
 20. Describe what situations you would use the following commands for viewing files: less, more, cat, tail, head
 
 (Some characteristics that may help your description might be the length of the file, whether or not you'd like to read the whole thing... or just the beginning or end, etc.)
 ----------
-
+You would use less if you just want to look at the file.
+You would use cat if you want to see all the content in the file.
+You would use head to see the first few lines of a file.
+You would use tail to see that last few lines of a file.
 
 
 ==========
 21.  How many words are in pg1232.txt?  What command did you use to determine the word count?
 ----------
 
-
+52639
 
 ==========
 22.  How many lines are in pg1232.txt?  What command did you use to determine the line count?
 ----------
+5063
