@@ -144,7 +144,6 @@ What commands did you use to do this?
 
 What commands did you use to do this?  Show the output.
 ----------
-find test 
-test
-test/1.txt
-test/2.txt
+find~/backup
+ls
+1.text       2.txt       copy_to_backup.sh
